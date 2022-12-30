@@ -11,6 +11,7 @@ app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 
 app.use(cors());
+// need to have above app.use routes
 
 app.use('/posts', postRoutes);
 
