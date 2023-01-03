@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, AppBar, Typography, Grow, Grid } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { getPosts } from './actions/posts'
-import logo from './images/logo.jpg';
+// import logo from './images/logo.jpg';
 import Posts from "./components/Posts/Posts";
 import Form from "./components/Form/Form";
 import useStyles from './styles';
@@ -19,7 +19,7 @@ function App() {
   return (
     <Container maxWidth="lg">
       <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography className={classes.heading} variant="h2" >App</Typography>
+        <Typography className={classes.heading} variant="h2" >Social Media App</Typography>
         {/*<img className={classes.image} src={logo} alt="icon"  width="100" /> */}
       </AppBar>
       <Grow in>

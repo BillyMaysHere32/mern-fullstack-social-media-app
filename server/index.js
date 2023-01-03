@@ -17,12 +17,17 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
+// greeting route
+app.get('/', (req, res) => {
+    res.send('Hello, welcome to social media app API')
+});
+
 //set the strictQuery option to true globally to suppress the warning
 mongoose.set('strictQuery', true);
 
 // DB Connection
 const PORT = process.env.PORT|| 4000;
-mongoose.connect(process.env.mongoDb, { useUnifiedTopology: true, useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
     .catch((error) => console.log(`${error} did not connect`));
 
